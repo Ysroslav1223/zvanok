@@ -35,7 +35,7 @@ export function MemoriesSection() {
       image: image3,
       title: "Главное воспоминание",
       description: "момент осозания куда попал...",
-      date: "Сентябрь 2017",
+      date: "Cентябрь 2017",
       url:'/thirdMemoriese'
     }
   ];
@@ -57,10 +57,7 @@ export function MemoriesSection() {
     const handleCardClick = async (memory) => {
         const newCount = count + 1;
         setCount(newCount);
-        if(newCount>3){
-            sessionStorage.removeItem('memoriesVisitCount')
-            setCount(0)
-        }else {sessionStorage.setItem('memoriesVisitCount', newCount.toString())};
+         {sessionStorage.setItem('memoriesVisitCount', newCount.toString())};
         
         console.log('Новое значение счетчика:', newCount);
         await new Promise(resolve => setTimeout(resolve, 50));
