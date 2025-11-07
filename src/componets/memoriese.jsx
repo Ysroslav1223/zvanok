@@ -98,7 +98,7 @@ console.log(count);
       {count>=3?(
        <div className='flex justify-center items-center mt-10' onClick={()=>navigate('/supriese')}>
                     <ChevronLeftIcon className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-                 <span className="italic font-light">Открыть Сюрприз!</span>
+                 <span className="italic font-light">Открыть Сюрприз</span>
         </div>
       ):''}
     </div>
