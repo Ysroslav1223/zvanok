@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState,useEffect} from 'react';
+=======
+import React, { useState} from 'react';
+>>>>>>> 2198da72489711639b8f066bfcdd0a9470c2dc53
 import { IntroSection } from './componets/intro';
 import { MemoriesSection } from './componets/memoriese';
 import { Route,Routes } from 'react-router';
@@ -6,6 +10,7 @@ import { FirstMemoriese } from './pages/firstMemories';
 import { SecondMemoriese } from './pages/secondMemories';
 import { ThirdMemoriese } from './pages/thirdMemorise';
 import {Supriese} from './pages/supriese';
+<<<<<<< HEAD
 import { useLocation } from 'react-router-dom';
 
  function ScrollToTop() {
@@ -27,6 +32,15 @@ function App() {
       <ScrollToTop/>
       <Routes>
         
+=======
+
+function App() {
+  const [currentSection, setCurrentSection] = useState('intro');
+  
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-pink-50">
+      <Routes>
+>>>>>>> 2198da72489711639b8f066bfcdd0a9470c2dc53
       {currentSection === 'intro' && (
         <Route path='/' element={<IntroSection onScrollDown={() => setCurrentSection('memories')} />}/>
       )}

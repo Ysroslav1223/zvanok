@@ -35,7 +35,11 @@ export function MemoriesSection() {
       image: image3,
       title: "Главное воспоминание",
       description: "момент осозания куда попал...",
+<<<<<<< HEAD
       date: "Cентябрь 2017",
+=======
+      date: "Сентябрь 2017",
+>>>>>>> 2198da72489711639b8f066bfcdd0a9470c2dc53
       url:'/thirdMemoriese'
     }
   ];
@@ -57,7 +61,14 @@ export function MemoriesSection() {
     const handleCardClick = async (memory) => {
         const newCount = count + 1;
         setCount(newCount);
+<<<<<<< HEAD
          {sessionStorage.setItem('memoriesVisitCount', newCount.toString())};
+=======
+        if(newCount>3){
+            sessionStorage.removeItem('memoriesVisitCount')
+            setCount(0)
+        }else {sessionStorage.setItem('memoriesVisitCount', newCount.toString())};
+>>>>>>> 2198da72489711639b8f066bfcdd0a9470c2dc53
         
         console.log('Новое значение счетчика:', newCount);
         await new Promise(resolve => setTimeout(resolve, 50));
@@ -98,7 +109,11 @@ console.log(count);
       {count>=3?(
        <div className='flex justify-center items-center mt-10' onClick={()=>navigate('/supriese')}>
                     <ChevronLeftIcon className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+<<<<<<< HEAD
                  <span className="italic font-light">Открыть Сюрприз!</span>
+=======
+                 <span className="italic font-light">Открыть Сюрприз</span>
+>>>>>>> 2198da72489711639b8f066bfcdd0a9470c2dc53
         </div>
       ):''}
     </div>
